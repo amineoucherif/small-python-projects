@@ -42,27 +42,28 @@ def wh(): #In which half the number is? wh=1:first half,wh=2:second half
     if check==1:
         for num in h1:
             if user==num:
-                print "Situated in the First half"
+                print "Situated in the First half."
                 wh=1
         for num in h2:
             if user==num:
-                print "Situated in the Second half"
+                print "Situated in the Second half."
                 wh=2
     elif check==0:
         wh=0
     return wh
-def apphalf(): #Maintain just the appropriate half
+def apphalf(): #Maintaining just the half of list where situated the choiced number.
     if wh==1:
         apphalf=h1
-        print "The New content:",apphalf
+        print "The New lists content:",apphalf
     elif wh==2:
         apphalf=h2
-        print "The New content:",apphalf
+        print "The New lists content:",apphalf
     else:
         apphalf=k
     return apphalf    
 #MAIN PROGRAM            
 k=createlist()
+#print k #Showing the list generated randomly
 user=int(input("Type a number from 0 to 100 : "))
 check=check()
 half()
